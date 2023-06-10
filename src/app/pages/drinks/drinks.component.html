@@ -1,7 +1,7 @@
 <div class="body">
   <div class="drink-container">
     <div *ngIf="cocktail" class="cocktail-container">
-      <div >
+      <div class="drink-box">
         <img [src]="getCocktailThumbnail(cocktail.strDrinkThumb)" class="cocktail-image large" alt="Cocktail Image">
         <h2 class="cocktail-name">{{ cocktail.strDrink }}</h2>
       </div>

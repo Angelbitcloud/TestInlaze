@@ -26,3 +26,17 @@
   max-height: 60px;
   margin-left: 450px;
 }
+
+
+@media screen and (min-width: 1440px) {
+
+  .home-button {
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    margin-left: 50px;
+    margin-right: auto;
+    color: rgb(165, 180, 252);
+  }
+  
+}
