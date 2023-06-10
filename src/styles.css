@@ -1,0 +1,187 @@
+@import "primeng/resources/themes/lara-dark-purple/theme.css";
+@import "primeng/resources/primeng.css";
+
+
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(4, 13, 25);
+}
+
+.body {
+  height: 100%;
+}
+
+.box {
+  margin-top: 100px;
+  margin-left: 150px;
+  margin-right: 150px;
+
+}
+
+.title {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.grid-container {
+  display: flex;
+  justify-content: center;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-form input {
+  margin-right: 10px;
+}
+
+.cocktails-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.grid-row {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+.grid-row-search {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+.item-image {
+  cursor: pointer;
+}
+
+.grid-column {
+  text-align: center;
+}
+
+.small-thumbnail {
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 5px;
+}
+
+.letters-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.cocktail-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  /* Agregamos una columna adicional para los ingredientes */
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 150px;
+}
+
+.cocktail-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.cocktail-image.large {
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+}
+
+.cocktail-details {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 16px;
+}
+
+.cocktail-name {
+  text-align: center;
+}
+
+.ingredients-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  justify-items: center;
+  align-items: flex-start;
+}
+
+.coctels-container{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  justify-items: center;
+  align-items: flex-start;
+}
+
+.ingredient-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.ingredient-name {
+  margin-top: 8px;
+}
+
+.drink-container {
+  display: grid;
+  justify-content: center;
+}
+
+.ingredients-heading {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.alphabetLink {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 5px;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(165, 180, 252);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  border-radius: 5px;
+}
+
+.alphabetLink:hover {
+  background-color: grey;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.centered-heading {
+  text-align: center;
+  margin-top: 200px;
+  font-size: 35px;
+}
+
+.instructions{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 300px;
+}
+
+.text{
+  font-size: 25px;
+}

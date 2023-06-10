@@ -1,0 +1,25 @@
+<div class="body">
+  <div class="drink-container">
+    <div *ngIf="cocktail" class="cocktail-container">
+      <div >
+        <img [src]="getCocktailThumbnail(cocktail.strDrinkThumb)" class="cocktail-image large" alt="Cocktail Image">
+        <h2 class="cocktail-name">{{ cocktail.strDrink }}</h2>
+      </div>
+      <div class="cocktail-details">
+        <h2 class="ingredients-heading">Ingredientes</h2>
+        <div class="ingredients-container">
+          <div *ngFor="let ingredient of ingredients" class="ingredient-item">
+            <img [src]="getIngredientThumbnail(ingredient.strIngredient)" alt="Ingredient Image" width="200" height="200" (click)="navigateToIngredient(ingredient.strIngredient)" >
+            <span class="ingredient-name">{{ ingredient.strIngredient }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="instructions">
+      <h3 class="centered-heading">Instrucciones</h3>
+      <p class="text">{{ cocktail.strInstructions }}</p>
+    </div>
+  </div>
+</div>
+
+

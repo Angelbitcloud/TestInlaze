@@ -1,0 +1,22 @@
+<div class="body">
+    <div class="box">
+        <div class="title">
+            <h2 class="cocktails-heading">Busqueda por la letra {{ letter }}</h2>
+        </div>
+        <div class="letters-container">
+            <a *ngFor="let letter of alphabet" class="alphabetLink" 
+                (click)="navigateToCocktailsByLetter(letter)">{{ letter }}</a>
+        </div>
+        <div class="grid-row">
+            <div class="grid-column" *ngFor="let cocktail of cocktails">
+                <div class="item-image item-image-hover" (click)="navigateToDrink(cocktail.idDrink)">
+                    <img [src]="getCocktailThumbnail(cocktail.strDrinkThumb)" class="small-thumbnail" alt="Cocktail Image">
+                </div>
+                <div class="item-name">
+                    {{ cocktail.strDrink }}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
