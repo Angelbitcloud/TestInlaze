@@ -141,6 +141,7 @@ body {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
   transition: background-color 0.3s, box-shadow 0.3s;
   border-radius: 5px;
+  cursor: pointer; 
 }
 
 .alphabetLink:hover {
