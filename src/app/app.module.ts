@@ -10,6 +10,7 @@ import { SharedModule } from './shared/shared.module';
 import { CocktailByLetterComponent } from './pages/cocktail-by-letter/cocktail-by-letter.component';
 import { PagesModule } from './pages/pages.module';
 import { PrimengModule } from './primeng/primeng.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { PrimengModule } from './primeng/primeng.module';
     FormsModule,
     SharedModule,
     PagesModule,
-    PrimengModule
+    PrimengModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

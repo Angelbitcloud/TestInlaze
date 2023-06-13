@@ -1,14 +1,17 @@
-@import "primeng/resources/themes/lara-dark-purple/theme.css";
-@import "primeng/resources/primeng.css";
+/* @import "/node_modules/primeng/resources/themes/lara-dark-purple/theme.css"; */
+/* @import "primeng/resources/primeng.css"; */
 
 
 
 html,
 body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: rgb(4, 13, 25);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('assets/img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
 }
 
 .body {
@@ -21,80 +24,155 @@ body {
   margin-right: 150px;
 }
 
+/* titulos */
 .title {
   display: grid;
   justify-content: center;
-  margin-bottom: 20px;
-}
-
-.grid-container {
-  display: flex;
-  justify-content: center;
-}
-
-.search-form {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.search-form input {
-  margin-right: 10px;
 }
 
 .cocktails-heading {
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 30px;
+  font-size: 8rem;
+  color: rgb(87, 71, 71);
+}
+
+/* paginador */
+
+.paginator{
+  display: grid;
+  background-color: #E8AA42;
+  margin-inline: 700px;
+  justify-content: center;
+  margin-top: 50px;
+  border-radius: 5px;
+}
+
+
+.mat-paginator-page {
+  background-color: #E57C23;
+  color: white;
+}
+
+.separator {
+  height: 5px;
+  background-color: #E57C23;
+  margin-inline: 70px;
+  margin-top: 50px;
+}
+
+/* contenedores para cargar cocteles  */
+
+.coctkails-list-container{
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 50px;
 }
 
 .grid-row {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
   justify-items: center;
 }
 
-.grid-row-search {
+.grid-column {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 20px;
-  justify-items: center;
+  text-align: center;
+  align-items: center;
 }
 
 .item-image {
   cursor: pointer;
 }
 
-.grid-column {
-  text-align: center;
+.item-name {
+  display: flex;
+  justify-content: center;
 }
 
 .small-thumbnail {
-  max-width: 150px;
-  max-height: 150px;
-  border-radius: 5px;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 50%;
 }
 
+
+/* busqueda por letras  */
+
 .letters-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  margin-top: 200px;
+}
+
+.letters-container.change {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.letters-title{
+  display: grid;
+  justify-content: center;
+  font-size: 2rem;
+  color: rgb(87, 71, 71);
+}
+
+.letters-bar {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+.alphabetLink {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 5px;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(2, 84, 100);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  border-radius: 5px;
+}
+
+.alphabetLink:hover {
+  background-color: grey;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* drinks css */
+
+.drink-container {
+  display: grid;
+  justify-content: center;
 }
 
 .cocktail-container {
   display: grid;
   grid-template-columns: auto auto;
-  /* Agregamos una columna adicional para los ingredientes */
   align-items: flex-start;
   gap: 16px;
   margin-top: 150px;
 }
 
+.drink-box{
+  display: grid;
+  justify-content: center;
+}
+
 .cocktail-image {
   width: 200px;
   height: 200px;
-  border-radius: 10px;
 }
 
 .cocktail-image.large {
@@ -103,27 +181,30 @@ body {
   border-radius: 10px;
 }
 
+.cocktail-name {
+  text-align: center;
+  background-color: #E57C23;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
 .cocktail-details {
   display: grid;
   grid-template-rows: auto auto;
   gap: 16px;
 }
 
-.cocktail-name {
+.ingredients-heading {
   text-align: center;
+  margin-bottom: 10px;
+  font-size: 50px;
+  color: black;
 }
 
 .ingredients-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  justify-items: center;
-  align-items: flex-start;
-}
-
-.coctels-container{
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
   gap: 16px;
   justify-items: center;
   align-items: flex-start;
@@ -139,59 +220,55 @@ body {
 
 .ingredient-name {
   margin-top: 8px;
-}
-
-.drink-container {
-  display: grid;
-  justify-content: center;
-}
-
-.ingredients-heading {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.alphabetLink {
-  display: inline-block;
-  padding: 5px 10px;
-  margin-right: 5px;
-  color: white;
-  text-decoration: none;
-  background-color: rgb(165, 180, 252);
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-  transition: background-color 0.3s, box-shadow 0.3s;
-  border-radius: 5px;
-}
-
-.alphabetLink:hover {
-  background-color: grey;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-.centered-heading {
-  text-align: center;
-  margin-top: 200px;
-  font-size: 35px;
+  color: black;
 }
 
 .instructions{
   display: grid;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 300px;
+  margin-bottom: 150px;
+  background-color: #025464;
+  border-radius: 15px;
+  margin-top: 15px;
+  margin-inline: 150px;
+}
+
+.centered-heading {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 35px;
 }
 
 .text{
   font-size: 25px;
   text-align: center;
+  padding-inline: 10px;
+  
 }
 
-.drink-box{
+.coctels-container{
   display: grid;
-  justify-content: center;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  justify-items: center;
+  align-items: flex-start;
 }
 
-@media screen and (min-width: 1440px) {
+
+
+/* footer */
+.pie-pagina{
+  width: 100%;
+  background-color: #E8AA42;
+  text-align: center;
+  padding: 10px 15px;
+  bottom: 0;
+  font-size: 1rem;
+  margin-top: 250px;
+}
+
+
+
+@media screen and (max-width: 1439px) {
 
   .box {
     margin-top: 100px;
@@ -206,4 +283,21 @@ body {
     gap: 10px;
     margin-top: 150px;
   }
+
+  .coctkails-list-container{
+    margin-left: 275px;
+    margin-right: 300px;
+    margin-bottom: 30px;
+  }
+
+  .pie-pagina{
+    width: 100%;
+    background-color: #E8AA42;
+    text-align: center;
+    padding: 10px 15px;
+    bottom: 0;
+    font-size: 1rem;
+    margin-top: 50px;
+  }
+  
 }

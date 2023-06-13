@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DrinksComponent } from './drinks/drinks.component';
 import { SharedModule } from '../shared/shared.module';
 import { IngredientComponent } from './ingedient/ingredient.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 
@@ -13,7 +14,11 @@ import { IngredientComponent } from './ingedient/ingredient.component';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    MatPaginatorModule
+  ],
+  exports:[
+    MatPaginatorModule
   ]
 })
 export class PagesModule { }

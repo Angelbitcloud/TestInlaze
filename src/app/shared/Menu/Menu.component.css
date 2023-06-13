@@ -2,7 +2,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: #071426;
+  background-color: #E8AA42;
   padding: 10px;
   margin: 0;
   width: 100%;
@@ -19,7 +19,7 @@
   font-size: 16px;
   margin-left: 260px;
   margin-right: auto;
-  color: rgb(165, 180, 252);
+  color: red;
 }
 
 .logo img {
@@ -28,7 +28,7 @@
 }
 
 
-@media screen and (min-width: 1440px) {
+@media screen and (max-width: 1596px) {
 
   .home-button {
     border: none;
@@ -36,7 +36,7 @@
     font-size: 16px;
     margin-left: 50px;
     margin-right: auto;
-    color: rgb(165, 180, 252);
+    color: red;
   }
   
 }

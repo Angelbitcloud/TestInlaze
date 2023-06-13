@@ -3,21 +3,45 @@
         <div class="title">
             <h2 class="cocktails-heading">Todos nuestros cócteles</h2>
         </div>
-
-        <div class="letters-container">
-            <a *ngFor="let letter of alphabet" class="alphabetLink" 
-                (click)="navigateToCocktailsByLetter(letter)">{{ letter }}</a>
-        </div>
-        <div class="grid-row">
-            <div class="grid-column" *ngFor="let cocktail of cocktails">
-                <div class="item-image " (click)="navigateToDrink(cocktail.idDrink)">
-                    <img [src]="getCocktailThumbnail(cocktail.strDrinkThumb)" class="small-thumbnail"
-                        alt="Cocktail Image">
-                </div>
-                <div class="item-name">
-                    {{ cocktail.strDrink }}
+        <div class="coctkails-list-container">
+            <div class="grid-row">
+                <div class="grid-column" *ngFor="let cocktail of pagedCocktails">
+                    <div class="item-image" (click)="navigateToDrink(cocktail.idDrink)">
+                        <img [src]="getCocktailThumbnail(cocktail.strDrinkThumb)" class="small-thumbnail"
+                            alt="Cocktail Image">
+                    </div>
+                    <div class="item-name">
+                        <span class="cocktail-name">{{ cocktail.strDrink }}</span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="paginator">
+        <mat-paginator  [length]="totalCocktails" 
+                        [pageSize]="pageSize" 
+                        [pageIndex]="pageIndex"
+                        (page)="onPageChange($event)" 
+                        showFirstLastButtons>
+        </mat-paginator>
+    </div>
+    <div class="separator"></div>
 </div>
+
+<div class="letters-container">
+    <div class="letters-title">Búsqueda por letras</div>
+    <div class="letters-bar">
+        <div class="letters-content">
+            <a *ngFor="let letter of alphabet" class="alphabetLink" (click)="navigateToCocktailsByLetter(letter)">{{ letter
+                }}</a>
+        </div>
+    </div>
+</div>
+
+<footer class="pie-pagina">
+    <div>
+        <div>
+            <small>&copy; 2023 <b>TheCocktailDB.Proudly</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </div>
+</footer>
